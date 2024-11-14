@@ -1,0 +1,110 @@
+.hero {
+  padding-top: calc(var(--mantine-spacing-xl) * 3);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+}
+
+.title {
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+
+  @media (max-width: 768px) {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
+
+.description {
+  font-size: var(--mantine-font-size-xl);
+  max-width: 600px;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+
+  @media (max-width: 768px) {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
+.highlight {
+  background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: 700;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section {
+  padding: calc(var(--mantine-spacing-xl) * 2) 0;
+  border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.sectionTitle {
+  margin-bottom: var(--mantine-spacing-xl);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.sectionText {
+  font-size: var(--mantine-font-size-lg);
+  max-width: 800px;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  margin-bottom: var(--mantine-spacing-xl);
+
+  @media (max-width: 768px) {
+    font-size: var(--mantine-font-size-md);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+  border-radius: inherit;
+  filter: blur(20px);
+  opacity: 0.7;
+  z-index: -1;
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+  0% {
+    opacity: 0.7;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(25px);
+  }
+  100% {
+    opacity: 0.7;
+    filter: blur(20px);
+  }
+}

@@ -1,0 +1,15 @@
+.section {
+  padding: 40px 0;
+}
+
+.sectionTitle {
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.sectionText {
+  color: var(--mantine-color-dimmed);
+  max-width: 800px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
