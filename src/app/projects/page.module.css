@@ -1,5 +1,8 @@
 .container {
   padding: 80px 0;
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
 }
 
 .title {
@@ -10,6 +13,10 @@
   background: linear-gradient(45deg, #4dabf7 10%, #228be6 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 }
 
 .card {

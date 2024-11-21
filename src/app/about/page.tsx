@@ -1,7 +1,7 @@
 'use client';
 
-import { Container, Title, Text, Timeline, List, ThemeIcon } from '@mantine/core';
-import { IconBriefcase, IconSchool, IconCode } from '@tabler/icons-react';
+import { Container, Title, Text, Timeline, List, ThemeIcon, Button } from '@mantine/core';
+import { IconBriefcase, IconSchool, IconCode, IconDownload } from '@tabler/icons-react';
 import classes from './page.module.css';
 
 export default function AboutPage() {
@@ -14,6 +14,17 @@ export default function AboutPage() {
           I'm a Software Engineer with a passion for building innovative solutions and learning new technologies.
           My journey in software development has been driven by curiosity and a desire to create impactful applications.
         </Text>
+
+        <Button
+          component="a"
+          href="/resume.pdf"
+          download
+          leftSection={<IconDownload size={14} />}
+          mt="xl"
+          variant="filled"
+        >
+          Download Resume
+        </Button>
 
         <Title order={2} mt={40}>Experience</Title>
         <Timeline active={1} bulletSize={24} lineWidth={2} mt="xl">

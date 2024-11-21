@@ -29,6 +29,7 @@ export function Providers({ children }: { children: ReactNode  }) {
     <MantineProvider 
       theme={theme} 
       defaultColorScheme="dark"
+      forceColorScheme="dark"
     >
       <Notifications />
       {children}
