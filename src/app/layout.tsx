@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
+import './globals.css';
 import { ColorSchemeScript } from '@mantine/core';
 import { Inter } from 'next/font/google';
 import { Providers } from '../components/providers/Providers';
@@ -22,13 +23,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <ColorSchemeScript defaultColorScheme="dark" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <Providers>
-      <Header />
+          <Header />
           {children}
-      <Footer />
-          </Providers>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

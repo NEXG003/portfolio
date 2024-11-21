@@ -5,7 +5,7 @@ import classes from "./Hero.module.css";
 export function Hero() {
   return (
     <div className={classes.hero}>
-      <Group align="flex-start" gap={50}>
+      <Group align="flex-start" gap={50} className={classes.heroGroup}>
         <div style={{ flex: 1 }}>
           <Title className={classes.title}>
             Hi, I&apos;m <span className={classes.highlight}>Ranjit Kairi</span>
@@ -38,13 +38,10 @@ export function Hero() {
           <Image
             src="/images/my-img.jpeg"
             alt="Ranjit Kairi"
-            radius="md"
-            w={280}
-            h={280}
             fit="cover"
+            className={classes.image}
             style={{
               boxShadow: "0 8px 16px rgba(0,0,0,0.1)",
-              borderRadius: "var(--mantine-radius-md)",
             }}
           />
         </div>
